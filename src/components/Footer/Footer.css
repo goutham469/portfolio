@@ -1,0 +1,38 @@
+.contactDetailsLinks{
+    text-decoration: none;
+    color: green;
+    position: relative;
+    padding-left: 5px;
+    bottom: 10px;
+}
+.sendMailInput{
+    background-color: rgb(33, 33, 33);
+    border-radius: 3px;
+    color: white;
+    width:300px;
+    height: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.sendMailTextArea{
+    color: white;
+    background-color: rgb(33, 33, 33);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+}
+.EmailSendButton{
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: black;
+    color: green;
+    width: 100px;
+    font-size: 16px;
+    height: 40px;
+}
+.EmailSendButton:hover{
+    background-color: green;
+    color: black;
+}

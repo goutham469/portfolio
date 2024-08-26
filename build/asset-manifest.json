@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.acbb5bd6.css",
+    "main.js": "/static/js/main.0943dea5.js",
+    "static/js/453.419a5d54.chunk.js": "/static/js/453.419a5d54.chunk.js",
+    "static/media/weather.png": "/static/media/weather.91e49eb583f5c9417a7f.png",
+    "static/media/profile.png": "/static/media/profile.5d03568f5941a2f4c7db.png",
+    "static/media/eventManagement.png": "/static/media/eventManagement.734a8b0d20f69f5e5f1f.png",
+    "static/media/blog.png": "/static/media/blog.af110d1e29ac0be27761.png",
+    "static/media/tensorflow.png": "/static/media/tensorflow.b8ed1af5b5062a6c0355.png",
+    "static/media/ml.png": "/static/media/ml.ec70679a6441650cf3e9.png",
+    "static/media/troubles.png": "/static/media/troubles.474ac215adf73c9159e2.png",
+    "static/media/node.png": "/static/media/node.cbc2cb5cb1f01425904e.png",
+    "static/media/notes.png": "/static/media/notes.150e59c67ded9434695f.png",
+    "static/media/k.png": "/static/media/k.02275bb4227eacb9e937.png",
+    "static/media/appdevelopment.png": "/static/media/appdevelopment.99e033ee7e9d325de95f.png",
+    "static/media/mongo.png": "/static/media/mongo.595b471efd473f47425f.png",
+    "static/media/gcp.png": "/static/media/gcp.c99885e61da037b311d6.png",
+    "static/media/g.png": "/static/media/g.372a41115c6d0c96e19a.png",
+    "static/media/mysql.png": "/static/media/mysql.196bd17b08a3329d7ec3.png",
+    "static/media/dashboard.png": "/static/media/dashboard.411d1a7d4b7280585fbc.png",
+    "static/media/aws.png": "/static/media/aws.fda80b59ebf705d1c6d6.png",
+    "static/media/css.png": "/static/media/css.c28afb3e7d4cfc9c568d.png",
+    "static/media/api.png": "/static/media/api.2de7f918d7651b1f5836.png",
+    "static/media/webdevelopment.png": "/static/media/webdevelopment.3d5c79ff960490ed54b8.png",
+    "static/media/github.png": "/static/media/github.5ec0c58b11c83430e7ef.png",
+    "static/media/bootstrap.png": "/static/media/bootstrap.e29b948f5b20d6d01626.png",
+    "static/media/socialMedia.png": "/static/media/socialMedia.d3b52a30018ebf7b05eb.png",
+    "static/media/html.png": "/static/media/html.e34d33f8616a722e3349.png",
+    "static/media/js.png": "/static/media/js.887b3754e4c81d88d253.png",
+    "static/media/docs.png": "/static/media/docs.092aa5986db827571360.png",
+    "index.html": "/index.html",
+    "main.acbb5bd6.css.map": "/static/css/main.acbb5bd6.css.map",
+    "main.0943dea5.js.map": "/static/js/main.0943dea5.js.map",
+    "453.419a5d54.chunk.js.map": "/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.acbb5bd6.css",
+    "static/js/main.0943dea5.js"
+  ]
+}

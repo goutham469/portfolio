@@ -1,0 +1,22 @@
+.docs{
+    text-align: left;
+}
+.docs-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 50px;
+    background-color: rgb(246, 246, 246);
+}
+.docs-navbar-button{
+    color: green;
+    font-size: 20px;
+}
+.docs-navbar-button:hover{
+    color: red;
+    font-weight: 500;
+}
+.docs-outlet{
+    padding: 10px;
+}

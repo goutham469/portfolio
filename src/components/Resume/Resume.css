@@ -1,0 +1,64 @@
+.resumeWindow{
+    padding: 5px;
+    padding-bottom: 20px;
+}
+.profileDiv{ 
+    padding: 20px;  
+
+    display: flex; 
+    align-items: center;
+    padding-bottom: 30px;
+}
+.profileImage{
+    height: 250px; 
+    border-radius: 20px;
+
+    position: relative;
+    left: 120px;
+    top: 50px;
+}
+.profileImage-mobile{
+    height: 250px; 
+    border-radius: 20px; 
+}
+.profileName{
+    height: 25vh;  
+    width: 400px;
+
+    padding: 20px;
+
+    color: brown;
+    font-size: 36px;
+    padding-left: 10vw;
+    background-color: rgb(65, 244, 0);
+    border-radius: 10px;
+}
+.SkillsSubDiv{
+    background-color: rgb(41, 37, 37);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.SkillsImage{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td,th{
+    border: 1px solid rgb(30, 238, 11);
+    padding: 8px;
+}
+
+.line{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 5vw;
+    border-top: 1px solid green;
+}

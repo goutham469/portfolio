@@ -95,7 +95,7 @@ function Introduction() {
                <img className='IntroductionImage-2' src={me}/>
             </div>
 
-            <div style={{backgroundColor:"#212020",borderRadius:"20px",padding:"7px"}}>
+            <div style={{backgroundColor:"#212020",borderRadius:"20px",padding:"7px",paddingLeft:"2vw"}}>
 
                 <div>
                     <p style={{textAlign:"left",fontSize:"20px"}}>About me</p>
@@ -105,6 +105,8 @@ function Introduction() {
                         enabling me to build robust and dynamic web applications.
                     </p>
                 </div>
+                <br/>
+                <br/>
 
                 <div>
                     <p style={{textAlign:"left",fontSize:"20px"}}>Education</p>

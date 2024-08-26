@@ -2,8 +2,11 @@ import React from 'react'
 import './Header.css'
 
 import g from './g.png'
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
+    const navigate = useNavigate();
+
   return (
     <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-around",alignItems:"center",height:"100px"}}>
         <div style={{color:"white",fontSize:"20px"}}>
@@ -22,16 +25,16 @@ function Header() {
         </div>
         <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-around"}}>
             <div>
-                <label className='HeaderButton'   onClick={()=>{window.location.href=`${process.env.REACT_APP_CLIENT_BASE_URL}/`}}   >Home</label>
+                <label className='HeaderButton'   onClick={()=>{navigate('/')}}   >Home</label>
             </div>
             <div>
-                <label className='HeaderButton' onClick={()=>{window.location.href=`${process.env.REACT_APP_CLIENT_BASE_URL}/resume`}}   >Resume</label>
+                <label className='HeaderButton' onClick={()=>{navigate("/resume")}}   >Resume</label>
             </div>
             <div>
-                <label className='HeaderButton' onClick={()=>{window.location.href=`${process.env.REACT_APP_CLIENT_BASE_URL}/`}} >Services</label>
+                <label className='HeaderButton' onClick={()=>{navigate('/')}} >Services</label>
             </div>
             <div>
-                <label className='HeaderButton' onClick={()=>{window.location.href=`${process.env.REACT_APP_CLIENT_BASE_URL}/`}} >Projects</label>
+                <label className='HeaderButton' onClick={()=>{navigate('/')}} >Projects</label>
             </div>
         </div>
     </div>

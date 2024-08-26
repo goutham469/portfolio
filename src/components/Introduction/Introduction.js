@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Introduction.css'
 
 import downloadIcon from './download.png'
@@ -22,6 +22,31 @@ import weather from './projects/weather.png'
 
 function Introduction() {
 
+    let [name,setName] = useState('')
+ 
+    let content = "I  am Goutham Reddy. ";
+    let speed = 400;
+
+     useEffect(()=>{
+        let index = 0;
+
+        function typeEffect() {
+            if (index < content.length) {
+                setName(prevName => prevName + content.charAt(index));
+                index++;
+                setTimeout(typeEffect, speed);
+            } else {
+                setTimeout(() => {
+                    setName('I');
+                    index = 0;
+                    typeEffect(); // Start typing again
+                }, speed);
+            }
+        }
+        typeEffect();
+
+     },[])
+
     function loadResume(event)
     {
         event.preventDefault();
@@ -31,9 +56,9 @@ function Introduction() {
     <div> 
         <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}}>
             <div>
-                <p className='text1'>-Full stack Web Developer</p>
-                <p className='text2'>Hello I'm</p>
-                <p className='text2'>Goutham Reddy</p>
+                <p className='text1'>-Full stack Web Developer</p> 
+                <p className='text2'>Hi </p>
+                <p className='text2'>{name}</p>
                 <p>I am excel at making dynamic web applications.</p>
                 <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap",marginTop:"20px"}}>
                     <div className='downloadIcon' onClick={(event)=>{loadResume(event)}}>

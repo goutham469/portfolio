@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+    <style>
+        p {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p id="typing"></p>
+
+    <script>
+        const text = "Hi ,I am Goutham Reddy ";
+        let index = 0;
+        const speed = 200; // Time interval in milliseconds
+
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, speed);
+            }
+            if(index == text.length)
+            {
+                index = 0;
+                document.getElementById("typing").innerHTML = "";
+                
+            }
+        }
+
+        typeEffect();
+    </script>
+</body>
+</html>

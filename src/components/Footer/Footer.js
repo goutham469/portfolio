@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Footer.css'
+import { useNavigate } from 'react-router-dom'
 
 // media assets
 import emailIcon from './email.png'
@@ -7,7 +8,7 @@ import instagram from './instagram.png'
 import linkedIn from './linkedin.png'
 import github from './github.png'
 import k from './k.png'
-import { useNavigate } from 'react-router-dom'
+import devIcon from '../assets/devIcon.png'
 
 
 function Footer() {
@@ -76,7 +77,8 @@ function Footer() {
                 </div>
 
                 <div style={{textAlign:"left",marginBottom:"10px"}}>
-                    <p onClick={(event)=>{naviagte('./dev')}} style={{marginLeft:"10px"}} className='contactDetailsLinks' >dev</p>
+                    <img width="22px" src={devIcon}/>
+                    <label onClick={(event)=>{naviagte('./dev')}} style={{marginLeft:"10px"}} className='contactDetailsLinks' >dev</label>
                 </div>
 
 

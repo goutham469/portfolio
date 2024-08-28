@@ -56,7 +56,7 @@ function Troubles() {
               <br/>
 
 
-              <iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" />
+              <iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" allowFullScreen />
               <p>code = &lt;iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" /&gt;</p>
               <br/>
 
@@ -87,7 +87,7 @@ function Troubles() {
               <p>code = &lt;img src="https://drive.google.com/thumbnail?id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr"/&gt;</p>
               <br/>
 
-              <iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video"></iframe>
+              <iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video"  allowFullScreen encrypted-media ></iframe>
               <p>code = &lt;iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" /&gt;</p>
               <br/>
 
@@ -97,11 +97,10 @@ function Troubles() {
            
         </div>
 
+        
 
-      </div>
 
-
-      
+      </div>      
     </div>
   )
 }

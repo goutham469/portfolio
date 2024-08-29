@@ -9,6 +9,7 @@ import cssImage from './assets/css.png'
 import bootstrap from './assets/bootstrap.png'
 import jsImage from './assets/js.png'
 import nodeJs from './assets/node.png'
+import reactImage from './assets/react.png'
 // database
 import mongoDB from './assets/mongo.png'
 import mysql from './assets/mysql.png'
@@ -130,6 +131,7 @@ function Resume() {
                         <img className='SkillsImage' src={cssImage}/>
                         <img className='SkillsImage' src={bootstrap}/>
                         <img className='SkillsImage' src={jsImage}/>
+                        <img className='SkillsImage' src={reactImage}/>
                         <img className='SkillsImage' src={nodeJs}/>
                     </div>
 

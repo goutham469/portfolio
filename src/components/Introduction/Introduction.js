@@ -123,8 +123,8 @@ function Introduction() {
             <div style={{backgroundColor:"#212020",borderRadius:"20px",padding:"7px",paddingLeft:"2vw"}}>
 
                 <div>
-                    <p style={{textAlign:"left",fontSize:"20px"}}>About me</p>
-                    <p style={{textAlign:"left"}}>
+                    <p style={{textAlign:"left",fontSize:"20px",fontWeight:"500",marginLeft:"10px"}}>About me</p>
+                    <p style={{textAlign:"left",marginLeft:"10px"}}>
                         Hello! I am a 3rd-year IT undergraduate with a passion for web development<br/>
                         and a knack for problem-solving. My expertise lies in the MERN stack,<br/>
                         enabling me to build robust and dynamic web applications.
@@ -134,15 +134,15 @@ function Introduction() {
                 <br/>
 
                 <div>
-                    <p style={{textAlign:"left",fontSize:"20px"}}>Education</p>
+                    <p style={{textAlign:"left",fontSize:"20px",fontWeight:"500",marginLeft:"10px"}}>Education</p>
                     <div style={{textAlign:"left"}}>
-                        <table>
+                        <table style={{margin:"10px"}}>
                             <tr>
                                 <td>
                                     <b>B-Tech   </b>
                                 </td>
                                 <td>
-                                    <label style={{color:"green"}}>VNR VJIET (2022-2026)</label>
+                                    <label style={{color:"white"}}>VNR VJIET (2022-2026)</label>
                                 </td>
                             </tr>
                             <tr>
@@ -150,7 +150,7 @@ function Introduction() {
                                     <b> Intermediate </b>
                                 </td>
                                 <td>
-                                    <label style={{color:"green"}}>Sri Chaitanya (2020-2022)</label>
+                                    <label style={{color:"white"}}>Sri Chaitanya (2020-2022)</label>
                                 </td>
                             </tr>
                             <tr>
@@ -158,7 +158,7 @@ function Introduction() {
                                     <b>SSC </b>
                                 </td>
                                 <td>
-                                    <label style={{color:"green"}}>ZPHS Madhapuram</label>
+                                    <label style={{color:"white"}}>ZPHS Madhapuram</label>
                                 </td>
                             </tr>
                         </table>
@@ -187,7 +187,8 @@ function Introduction() {
                 </div>
             </div>
         </div>
-        <div style={{marginTop:"20px"}}>
+
+        <div style={{marginTop:"20px",padding:"10px"}}>
             <p style={{textAlign:"left",fontSize:"20px",paddingLeft:"10vw",color:"green",marginTop:"40px"}}><b>My Work</b></p>
             <div style={{display:"flex",justifyContent:"space-around",margin:"20px",flexWrap:"wrap"}}>
                 <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://4149.netlify.app/'}}>
@@ -198,7 +199,7 @@ function Introduction() {
                     <img className='projectImage' src={eventManagement}/>
                     <h4>event Management</h4>
                 </div>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://vnrvjiet.netlify.app/'}}>
+                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://vnrvjiet10.netlify.app/'}}>
                     <img className='projectImage' src={socialMedia}/>
                     <h4>social media</h4>
                 </div>

@@ -2,6 +2,9 @@ import React from 'react'
 import './Troubles.css'
 
 function Troubles() {
+  const styleSheet = {
+    code : {backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}
+  }
   return (
     <div>
       <center><p>Troubles</p></center>
@@ -52,12 +55,16 @@ function Troubles() {
             </li>
             <li>
               <iframe src='https://drive.google.com/uc?export=view&id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr' />
-              <p>code = &lt;iframe src="https://drive.google.com/uc?export=view&id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr" /&gt;</p>
+              <pre style={styleSheet.code}>
+                <code>{`<iframe src="https://drive.google.com/uc?export=view&id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr"/>`}</code>
+              </pre>
               <br/>
 
 
               <iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" allowFullScreen />
-              <p>code = &lt;iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" /&gt;</p>
+              <pre style={styleSheet.code}>
+                <code>{`<iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" />`}</code>
+              </pre>
               <br/>
 
             </li>
@@ -84,11 +91,15 @@ function Troubles() {
             </li>
             <li>  
               <img src="https://drive.google.com/thumbnail?id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr"/>
-              <p>code = &lt;img src="https://drive.google.com/thumbnail?id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr"/&gt;</p>
+              <pre style={styleSheet.code}>
+                <code>{`<img src="https://drive.google.com/thumbnail?id=1Vlmw56NRwc6ySN0V7KV-7VRclfWpCrEr" />`}</code>
+              </pre>
               <br/>
 
               <iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video"  allowFullScreen encrypted-media ></iframe>
-              <p>code = &lt;iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" /&gt;</p>
+              <pre style={styleSheet.code}>
+                <code>{`<iframe src="https://drive.google.com/file/d/1_FLE3UZ5T-rgnj6_JhKC8crvo620zyEQ/preview" type="video" />`}</code>
+              </pre>
               <br/>
 
             </li>
@@ -97,9 +108,159 @@ function Troubles() {
            
         </div>
 
+
+
+        <div className="troubles-child-div">
+          <p style={{ color: "yellow", fontSize: "20px", fontWeight: "500", textAlign: "center" }}>
+            React props
+          </p>
+
+          <div>
+            <ol>
+              <li>Props are used to send data to the child component from the parent.</li>
+              <li>Below is the child component code:</li>
+              <li>
+                <span>
+                  <pre style={styleSheet.code}>
+                    <code>{`function Child({ user_name })`}</code>
+                    <br />
+                    <code>{`{`}</code>
+                    <br/>
+                    <code>{`  return <div>Hi {user_name}</div>;`}</code>
+                    <br />
+                    <code>{`}`}</code>
+                  </pre>
+                </span>
+              </li>
+              <li>And this is the Parent component:</li>
+              <li>
+                <span>
+                  <pre style={styleSheet.code}>
+                    <code>{`function Parent() `}</code>
+                    <br />
+                    <code>{`{`}</code>
+                    <br/>
+                    <code>{`  const users = ['goutham', 'ramu', 'reddy'];`}</code>
+                    <br />
+                    <code>{`  return (`}</code>
+                    <br />
+                    <code>{`      <div>`}</code>
+                    <br />
+                    <code>{`      {`}</code>
+                    <br/>
+                    <code>{`        users.map(user => <Child user_name={user} />)`}</code>
+                    <br/>
+                    <code>{`      }`}</code>
+                    <br/>
+                    <code>{`      </div>`}</code>
+                    <br/>
+                    <code>{`    );`}</code>
+                    <br />
+                    <code>{`}`}</code>
+                  </pre>
+                </span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div className='troubles-child-div'>
+          <p style={{ color: "yellow", fontSize: "20px", fontWeight: "500", textAlign: "center" }}>
+            React Child data transfer to Parent
+          </p>
+          <pre style={styleSheet.code}>
+            <code>{`<Parent>`}</code>
+            <br/>
+            <code>{`  <Child />`}</code>
+            <br/>
+            <code>{`</Parent/>`}</code>
+          </pre>
+          <br/>
+          <b>Parent Comonent</b>
+          
+          <pre style={styleSheet.code}>
+            <code>
+              {`import React, { useState } from 'react';
+import ChildComponent from './ChildComponent';
+
+const ParentComponent = () => {
+  const [dataFromChild, setDataFromChild] = useState(null);
+
+  const handleDataFromChild = (data) => {
+    setDataFromChild(data);
+  };
+
+  return (
+    <div>
+      <h1>Parent Component</h1>
+      <p>Data from Child: {dataFromChild}</p>
+      <ChildComponent sendDataToParent={handleDataFromChild} />
+    </div>
+  );
+};
+
+export default ParentComponent;`}
+            </code>
+          </pre>
+
+          <br/>
+          <br/>
+          <b>Child Component</b>
+          <pre style={styleSheet.code}>
+            <code>
+              {`import React from 'react';
+
+const ChildComponent = ({ sendDataToParent }) => {
+  const sendData = () => {
+    const data = 'Hello from Child';
+    sendDataToParent(data);
+  };
+
+  return (
+    <div>
+      <h2>Child Component</h2>
+      <button onClick={sendData}>Send Data to Parent</button>
+    </div>
+  );
+};
+
+export default ChildComponent;`}
+            </code>
+          </pre>
+        </div>
         
 
+        <div className='troubles-child-div'>
+          <p style={{ color: "yellow", fontSize: "20px", fontWeight: "500", textAlign: "center" }}>
+            Scroll bar changes in HTML and React
+          </p>
+          <pre style={styleSheet.code}>
+            <code>
+              {`/* Target the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;  /* Width for vertical scrollbars */
+  height: 8px; /* Height for horizontal scrollbars */
+}
 
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}`}
+            </code>
+          </pre>
+        </div>
       </div>      
     </div>
   )

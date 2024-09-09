@@ -35,6 +35,5 @@
 .dev-outlet{
     padding: 10px;
     height: 90vh;
-    width: 90vw;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }

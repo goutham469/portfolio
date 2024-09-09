@@ -14,6 +14,7 @@ import Console from './components/Console/Console';
 import Docs from './components/docs/Docs';
 import Notes from './components/Notes/Notes';
 import Troubles from './components/Troubles/Troubles';
+import CodeFormatter from './components/Formatter/CodeFormatter';
 
 
 function App() {
@@ -53,6 +54,10 @@ function App() {
         {
           path:'troubles',
           element:<Troubles/>
+        },
+        {
+          path:'formatter',
+          element:<CodeFormatter/>
         }
       ]
     }

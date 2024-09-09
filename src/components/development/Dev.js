@@ -7,6 +7,7 @@ import dashboard from './Icons/dashboard.png'
 import docs from './Icons/docs.png'
 import notes from './Icons/notes.png'
 import troubles from './Icons/troubles.png'
+import editor from './Icons/editor.png'
 
 function Dev() {
     const naviagte = useNavigate();
@@ -31,6 +32,10 @@ function Dev() {
                 <div className='dev-button' onClick={()=>{naviagte('./troubles')}}>
                     <img className='dev-navbar-icons' src={troubles}/>
                     <label className='dev-navbar-text'>Trouble<br/>shoots</label>
+                </div>
+                <div className='dev-button' onClick={()=>{naviagte('./formatter')}}>
+                    <img className='dev-navbar-icons' src={editor}/>
+                    <label className='dev-navbar-text'>Formatter</label>
                 </div>
             </div>
             <div className='dev-outlet'>

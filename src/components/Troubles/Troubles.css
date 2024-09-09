@@ -2,15 +2,17 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 5vw;
 }
 .troubles-child-div{ 
     background-color: rgb(33, 33, 33);
     border-radius: 10px;
     padding: 5px;
     padding-left: 15px;
-    margin: 20px;
+    margin-bottom: 20px;
     text-align: start;
+    max-width: 500px;
+    max-height: 600px;
+    overflow-y: scroll;
 } 
 .troubles-heading{
     color: green;
@@ -20,3 +22,11 @@ li{
     list-style-position: inside;
     color: rgb(255, 255, 255);
 }
+::-webkit-scrollbar {
+    width: 8px;  /* Width for vertical scrollbars */
+    height: 8px; /* Height for horizontal scrollbars */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }

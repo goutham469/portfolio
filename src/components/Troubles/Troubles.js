@@ -261,6 +261,149 @@ export default ChildComponent;`}
             </code>
           </pre>
         </div>
+
+        <div className='troubles-child-div'>
+          <p style={{ color: "yellow", fontSize: "20px", fontWeight: "500", textAlign: "center" }}>
+            Creating Ubuntu machine on AWS 
+          </p>
+          <ol>
+            <li>Go to <a href='https://aws.amazon.com/' target='_blank'>aws.amazon.com</a></li>
+            <li>SignIn to aws console.</li>
+            <li>Search for EC2</li>
+            <li>Click on launch Instance</li>
+            <li style={{backgroundColor:"black",padding:"10px",borderRadius:"10px"}}>
+              <b>Creation of Virtual machine</b>
+              <br/>
+              <ul >
+                <li>give a name to VM. You may give any name , at the console this is the name you identify.</li>
+                <li>Select OS type as <b style={{color:"gold"}}>Ubuntu</b> .</li>
+                <li>Choose t2.micro (or) t3.micro[for large server]</li>
+                <li>create a new key pair .</li>
+                <li>This key pair will be used for login to VM from your local machine.</li>
+                <li>Note : This key pair will not be stored any where else, keep it safe.</li>
+                <li>any one with this key pair can handle entire VM , so be aware.</li>
+                <li>Click on <b>Allow HTTP traffic from the internet</b></li>
+                <li>Click on <b>Allow HTTPS traffic from the internet</b></li>
+                <li>Final step :- <b>Click on <b>launch instance</b> to create VM.</b></li>
+              </ul>
+            </li>
+            <li>now your AWS Ubuntu VM is ready to use.</li>
+            <li>this is same as a local machine</li>
+            <li>you can host any kind of applications.</li>
+            <li>For hosting and other services</li>
+            <li>Download necessary libraries and packages.</li>
+            <li>get the code from gitHub repository by cloning </li>
+            <li>move to that directory, and make what you want .</li>
+            <li style={{backgroundColor:"black",borderRadius:"10px",padding:"10px"}}>
+              <b style={{color:"red"}}>Danger zone's</b>
+              <p>-&gt; make sure you terminate the instance after you feel its use is completed.</p>
+              <p>-&gt; other wise you may be charged additionally.</p>
+              <p>-&gt; you may even suspend the VM , and later you can resume it.</p>
+            </li>
+          </ol>
+
+        </div>
+
+
+        <div className='troubles-child-div'>
+          <p style={{ color: "yellow", fontSize: "20px", fontWeight: "500", textAlign: "center" }}>
+            Running a server on Ubuntu machine on AWS 
+          </p>
+          <div>
+            <h5 style={{color:"green"}}>pre-requisites</h5>
+            <ol>
+              <li>A Ubuntu/Linux Virtual machine , preferebly "Ubuntu".</li>
+              <li>first login as root user</li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                <code>
+                  {`sudo su -`}
+                </code>
+              </pre>
+              <li>for any kind of server <b>Git</b> is important , install it.</li>
+              <li>
+                <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`}
+                  </code>
+                </pre>
+              </li>
+              <li>install NVM (Node Version Manager)</li>
+              <li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`. ~/.nvm/nvm.sh`}
+                  </code>
+                </pre>
+              </li>
+              <li>Install latest version of node</li>
+              <li>
+                <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`nvm install node`}
+                  </code>
+                </pre>
+              </li>
+              <li>to check weather node is installed or not , you may run below commands.</li>
+              <li>
+                <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`node -v
+npm -v`}
+                  </code>
+                </pre>
+              </li>
+              <li>run below command to install and update git ecosystem</li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`sudo apt-get update -y
+sudo apt-get install git -y`}
+                  </code>
+                </pre>
+              <li>to check weather git is installed or not </li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`git — version`}
+                  </code>
+                </pre>
+              <li>get the code from gitHub to local VM</li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`git clone remote_url_link`}
+                  </code>
+                </pre>
+              <p>"example remote_url_link :-"  <br/><b>https://github.com/goutham469/nss.git</b></p>
+              <li>Now the code is on our VM.</li>
+              <li>By default main branch of repository is loaded to current working directory.</li>
+              <li>you may change it by </li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`git checkout branch_name`}
+                  </code>
+                </pre>
+              <li>
+                for security reasons : you may create a <b>.env</b> file here and add varaible here.
+              </li>
+              <li>
+                run respective commands , for your application
+              </li>
+              <li>for Node</li>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                  <code>
+                    {`node server.js`}
+                  </code>
+                </pre>
+              <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+                <code>
+                  {`<pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+  <code>
+    // above code goes here
+  </code>
+</pre> `}
+                </code>
+              </pre>
+            </ol>
+          </div>
+        </div>
       </div>      
     </div>
   )

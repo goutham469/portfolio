@@ -50,6 +50,21 @@ const CodeFormatter = () => {
       <pre style={{ backgroundColor: '#181818', borderRadius:"10px",padding:"20px",textAlign:"left",width:"800px",overflowX:"scroll"}}>
         {formatCode(code)}
       </pre>
+      <br/>
+      <br/>
+
+      <div style={{textAlign:"left",backgroundColor:"#454545",borderRadius:"10px",padding:"10px"}}>
+        <h4>wrap the above code inside </h4>
+        <pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+          <code>
+            {`<pre style={{backgroundColor:"black",borderRadius:"10px",padding:"10px",overflowX:"scroll"}}>
+  <code>
+    // above code goes here
+  </code>
+</pre>`}
+          </code>
+        </pre>
+      </div>
     </div>
   );
 };

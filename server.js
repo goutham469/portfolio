@@ -8,6 +8,7 @@ const usersAPI = require('./APIs/usersAPI')
 const DBAccess = require("./Middlewares/DBAccess")
 const IPAddress = require("./Middlewares/IPAddress")
 const securityAPI = require("./APIs/securityAPI")
+const ImageSearch = require("./APIs/ImageSearch")
 const mclient = require('mongodb').MongoClient
 
 mclient.connect(process.env.MONGODB_URL).then(client=>{
@@ -38,6 +39,8 @@ app.use('/count',countAPI)
 app.use('/users' , usersAPI)
 app.use('/security' , securityAPI)
 
+app.use('/Image-search',ImageSearch)
+
 
 const listOfServers = [
     "https://doughtflow.onrender.com",
@@ -53,7 +56,7 @@ async function fetchURLs()
     })
 }
 
-setInterval(fetchURLs , 5*60*1000)
+// setInterval(fetchURLs , 5*60*1000)
 
 
 app.listen(4000,()=>{console.log("server running on port 4000...")})

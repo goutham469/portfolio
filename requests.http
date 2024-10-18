@@ -34,3 +34,11 @@ Content-Type: application/json
 {
     "ip":"::1"
 }
+###
+POST https://portfolio-goutham.onrender.com/Image-search/search
+Content-Type: application/json
+
+{
+    "email":"your_email@gmail.com",
+    "query":"search_query"
+}

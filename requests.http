@@ -1,0 +1,36 @@
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "email":"gouth@gmail.com"
+}
+###
+POST http://localhost:4000/users/api-request
+Content-Type: application/json
+
+{
+    "email":"gouth@gmail.com"
+}
+###
+POST http://localhost:4000/users/revoke-credits-manually
+Content-Type: application/json
+
+{
+    "email":"gouth@gmail.com"
+}
+###
+POST http://localhost:4000/users/credentials
+Content-Type: application/json
+
+{
+    "email":"uppinurigouthamreddy@gmail.com"
+}
+###
+GET http://localhost:4000/security/blocked-ips
+###
+POST http://localhost:4000/security/block-ip-Address
+Content-Type: application/json
+
+{
+    "ip":"::1"
+}

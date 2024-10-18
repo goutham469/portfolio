@@ -1,0 +1,25 @@
+.service-plans{
+    text-align: left;
+    background-color: rgb(98, 95, 95);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.services-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 20px;
+}
+.service-tab{
+    background-color: rgb(98, 95, 95);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+
+    cursor: pointer;
+}

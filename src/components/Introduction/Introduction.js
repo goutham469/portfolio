@@ -17,12 +17,15 @@ import blog from './projects/blog.png'
 import eventManagement from './projects/eventManagement.png'
 import socialMedia from './projects/socialMedia.png'
 import weather from './projects/weather.png'
+import doughtFlow from './projects/doughtFlow.png'
+import { useNavigate } from 'react-router-dom'
 
 
 
 function Introduction() {
 
     let [name,setName] = useState('')
+    const navigate = useNavigate()
  
     let content = "I  am Goutham Reddy. ";
     let speed = 400;
@@ -58,7 +61,7 @@ function Introduction() {
             <div>
                 <p className='text1'>-Full stack Web Developer</p> 
                 <p className='text2'>Hi </p>
-                <p className='text2'>{name}</p>
+                <p className='text21'>{name}</p>
                 <p>I am excel at making dynamic web applications.</p>
                 <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap",marginTop:"20px"}}>
                     <div className='downloadIcon' onClick={(event)=>{loadResume(event)}}>
@@ -115,15 +118,12 @@ function Introduction() {
                 </div>
             </div>
         </div>
-        <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}}>
-            <div>
-               <img className='IntroductionImage-2' src={me}/>
-            </div>
+        <div>
+            <p style={{textAlign:"left",marginLeft:"10vw",fontSize:"20px",color:"green"}}><b>About me</b></p>
 
-            <div style={{backgroundColor:"#212020",borderRadius:"20px",padding:"7px",paddingLeft:"2vw"}}>
+            <div style={{backgroundColor:"#212020",borderRadius:"20px",padding:"7px",paddingLeft:"2vw",width:"fit-content",margin:"20px",marginLeft:"7vw"}}>
 
                 <div>
-                    <p style={{textAlign:"left",fontSize:"20px",fontWeight:"500",marginLeft:"10px"}}>About me</p>
                     <p style={{textAlign:"left",marginLeft:"10px"}}>
                         Hello! I am a 3rd-year IT undergraduate with a passion for web development<br/>
                         and a knack for problem-solving. My expertise lies in the MERN stack,<br/>
@@ -169,6 +169,10 @@ function Introduction() {
         <div style={{marginTop:"30px",padding:"10px"}}>
             <p style={{textAlign:"left",marginLeft:"10vw",fontSize:"20px",color:"green"}}><b>My Services</b></p>
             <div style={{display:"flex",justifyContent:"space-around",margin:"20px",flexWrap:"wrap"}}>
+                <div className='technologyDiv' onClick={()=>navigate('/services')}>
+                    <img className='technologyIcon' src={api}/>
+                    <p>API Services</p>
+                </div>
                 <div className='technologyDiv'>
                     <img className='technologyIcon' src={webdevelopment}/>
                     <p>Web <br/>development</p>
@@ -181,16 +185,12 @@ function Introduction() {
                     <img className='technologyIcon' src={ml}/>
                     <p>Machine Learning<br/> Solutions</p>
                 </div>
-                <div className='technologyDiv'>
-                    <img className='technologyIcon' src={api}/>
-                    <p>API Services</p>
-                </div>
             </div>
         </div>
 
         <div style={{marginTop:"20px",padding:"10px"}}>
             <p style={{textAlign:"left",fontSize:"20px",paddingLeft:"10vw",color:"green",marginTop:"40px"}}><b>My Work</b></p>
-            <div style={{display:"flex",justifyContent:"space-around",margin:"20px",flexWrap:"wrap"}}>
+            <div className='projects-bar'>
                 <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://4149.netlify.app/'}}>
                     <img className='projectImage' src={blog}/>
                     <h4>Blog</h4>
@@ -199,13 +199,17 @@ function Introduction() {
                     <img className='projectImage' src={eventManagement}/>
                     <h4>event Management</h4>
                 </div>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://vnrvjiet10.netlify.app/'}}>
+                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://feedbook.netlify.app/'}}>
                     <img className='projectImage' src={socialMedia}/>
                     <h4>social media</h4>
                 </div>
                 <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://sunshower.netlify.app/'}}>
                     <img className='projectImage' src={weather}/>
                     <h4>weather App</h4>
+                </div>
+                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://doughtflow.netlify.app/'}}>
+                    <img className='projectImage' src={doughtFlow}/>
+                    <h4>Dought Flow</h4>
                 </div>
             </div>
         </div>

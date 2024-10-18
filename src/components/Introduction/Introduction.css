@@ -9,6 +9,16 @@
     padding: 0px;
     margin: 0px;
     text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text21{
+    color: green;
+    font-size: 34px;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .text3{
     color: white;
@@ -81,17 +91,22 @@
     color: black;
     font-weight: 500;
 }
+.projects-bar{
+    overflow-x: scroll;
+    /* style={{display:"flex",justifyContent:"space-around",margin:"20px",flexWrap:"wrap"}} */
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+}
 .projectImage{
-    height: 300px;
     width: 200px;
     border-radius: 20px;
 }
 .projectDiv{
     background-color: rgb(31, 31, 31);
     border-radius: 20px;
-    padding: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    
 }
 .projectDiv:hover{
     background-color:green;

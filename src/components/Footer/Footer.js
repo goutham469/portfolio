@@ -45,7 +45,7 @@ function Footer() {
         }
     }
   return (
-    <div style={{paddingBottom:"30px"}}>
+    <div style={{paddingBottom:"30px",marginTop:"80px"}}>
         <p style={{textAlign:"left",fontSize:"24px",paddingLeft:"10vw",color:"green"}}><b>Contact Me</b></p>
         <div style={{display:"flex",justifyContent:"space-around",margin:"20px",flexWrap:"wrap"}}>
             <div>

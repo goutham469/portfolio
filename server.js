@@ -47,7 +47,8 @@ const listOfServers = [
     "https://nss-tl7i.onrender.com",
     "https://fieldprojectserver.onrender.com",
     "https://certificationprojectserver.onrender.com",
-    "https://portfolio-goutham.onrender.com"
+    "https://portfolio-goutham.onrender.com",
+    "https://url-shortener-o1gb.onrender.com"
 ]
 async function fetchURLs()
 {

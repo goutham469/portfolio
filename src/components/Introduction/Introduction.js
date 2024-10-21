@@ -9,16 +9,12 @@ import webdevelopment from './webdevelopment.png'
 import appdevelopment from './appdevelopment.png'
 import ml from './ml.png'
 import api from './api.png'
+import googleSEO from './googleSEO.png'
 
 import me from '../Resume/profile.png'
 
-// projects
-import blog from './projects/blog.png'
-import eventManagement from './projects/eventManagement.png'
-import socialMedia from './projects/socialMedia.png'
-import weather from './projects/weather.png'
-import doughtFlow from './projects/doughtFlow.png'
 import { useNavigate } from 'react-router-dom'
+import Projects from './Projects'
 
 
 
@@ -28,7 +24,7 @@ function Introduction() {
     const navigate = useNavigate()
  
     let content = "I  am Goutham Reddy. ";
-    let speed = 400;
+    let speed = 300;
 
      useEffect(()=>{
         let index = 0;
@@ -178,6 +174,10 @@ function Introduction() {
                     <p>Web <br/>development</p>
                 </div>
                 <div className='technologyDiv'>
+                    <img className='technologyIcon' style={{borderRadius:"20px"}} src={googleSEO}/>
+                    <p>Google search engine <br/>Optimization</p>
+                </div>
+                <div className='technologyDiv'>
                     <img className='technologyIcon' src={appdevelopment}/>
                     <p>Mobile App<br/> development</p>
                 </div>
@@ -188,31 +188,7 @@ function Introduction() {
             </div>
         </div>
 
-        <div style={{marginTop:"20px",padding:"10px"}}>
-            <p style={{textAlign:"left",fontSize:"20px",paddingLeft:"10vw",color:"green",marginTop:"40px"}}><b>My Work</b></p>
-            <div className='projects-bar'>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://4149.netlify.app/'}}>
-                    <img className='projectImage' src={blog}/>
-                    <h4>Blog</h4>
-                </div>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://event-management-ivory.vercel.app/'}}>
-                    <img className='projectImage' src={eventManagement}/>
-                    <h4>event Management</h4>
-                </div>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://feedbook.netlify.app/'}}>
-                    <img className='projectImage' src={socialMedia}/>
-                    <h4>social media</h4>
-                </div>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://sunshower.netlify.app/'}}>
-                    <img className='projectImage' src={weather}/>
-                    <h4>weather App</h4>
-                </div>
-                <div className='projectDiv' onClick={(event)=>{event.preventDefault();window.location.href='https://doughtflow.netlify.app/'}}>
-                    <img className='projectImage' src={doughtFlow}/>
-                    <h4>Dought Flow</h4>
-                </div>
-            </div>
-        </div>
+        <Projects/>
         
     </div>
   )

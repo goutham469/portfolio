@@ -57,7 +57,7 @@ async function fetchURLs()
     })
 }
 
-setInterval(fetchURLs , 5*60*1000)
+setInterval(fetchURLs , 10*60*1000)
 
 
 app.listen(4000,()=>{console.log("server running on port 4000...")})
